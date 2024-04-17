@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Branch
+metadata:
+  name: main
+spec:
+  protection:
+    allowedActions:
+      - create
+      - update
+      - delete
+    # Regel zum Verhindern von direktem Pushen auf den main-Branch
+    enforce:
+      - protectionType: enforceMergeCheck
